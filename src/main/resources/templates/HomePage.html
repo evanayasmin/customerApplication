@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Customer processing: Home Page</title>
+<link th:href="@{/bootstrap.min.css}" rel="stylesheet" />
+<script th:href="@{/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<div class="container" align="center">
+<div class="row">
+<div class="col-md-6">
+<form method="POST" enctype="multipart/form-data" action="/uploadFile">
+			<table class="table">
+				<tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+				<tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+			</table>
+		</form>
+</div>
+<div class="col-md-3">
+<input type="submit" class="btn btn-primary" value="Export Valid Customer" name="/getCustomersByThread" /></div>
+<div class="col-md-3">
+<input type="submit" class="btn btn-warning"value="Export Invalid Customer" name="/getInvalidCustomersByThread" /></div>
+</div>
+
+</div>
+</body>
+</html>
